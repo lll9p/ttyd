@@ -8,5 +8,5 @@ RUN apk add --no-cache bash tini
 
 EXPOSE 7681
 
-ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["ttyd", "bash"]
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
